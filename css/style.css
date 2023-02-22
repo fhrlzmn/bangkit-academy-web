@@ -1,0 +1,269 @@
+/* Font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+/* Initial CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-style: unset;
+  font-weight: unset;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Roboto Mono', monospace; */
+  font-size: 16px;
+}
+
+/* Styling starts here */
+.container,
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav,
+ul.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: red;
+}
+
+header {
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(5px);
+}
+
+div.logo a {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+ul.nav-list {
+  list-style: none;
+  gap: 3rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  padding-top: 4rem;
+}
+
+div.content,
+aside {
+  padding: 2rem 0;
+}
+
+div.content {
+  width: 70%;
+  padding-right: 3rem;
+}
+
+.content-date {
+  color: #5f6368;
+  font-size: 1rem;
+}
+
+.content-title {
+  color: #000;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.content-title span {
+  color: #ff0000;
+}
+
+.content img {
+  width: 100%;
+}
+
+.content-description {
+  font-weight: 300;
+  padding-top: 1rem;
+}
+
+.content-description h2 {
+  font-size: 3rem;
+  margin: 2rem 0 0.5rem 0;
+  font-weight: 400;
+}
+
+.content-description p {
+  line-height: 2rem;
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  width: 100%;
+}
+
+.card-description {
+  padding: 1rem;
+}
+
+.card-description h3 {
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+.card-description h3.center {
+  text-align: center;
+}
+
+.card-description p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #5f6368;
+}
+
+aside {
+  width: 30%;
+  border-left: 2px solid rgba(255, 0, 0, 0.05);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+  position: sticky;
+  top: 4.8rem;
+  overflow-y: auto;
+  left: 0;
+  z-index: 99;
+  align-self: flex-start;
+}
+
+.profile-title {
+  font-weight: 500;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+
+.profile-identity {
+  line-height: 1.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.profile-name {
+  font-size: 1.1rem;
+}
+
+.profile-position {
+  color: #5f6368;
+  font-size: 0.9rem;
+}
+
+.profile-desc {
+  color: #5f6368;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.profile-social {
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-social img {
+  fill: #000;
+}
+
+.profile-social a:hover {
+  fill: #ff0000;
+}
+
+footer {
+  font-weight: 300;
+  padding: 0rem 3rem;
+  background-color: #eff0f1;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 1rem 0;
+}
+
+.footer-logo {
+  max-width: 200px;
+  height: 100%;
+}
+
+.footer-links {
+  line-height: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.footer-content ul {
+  list-style: none;
+  margin-top: 1rem;
+  color: #5f6368;
+}
+
+.footer-links h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.footer-text {
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  border-top: 1.2px solid rgba(0, 0, 0, 0.1);
+  color: #5f6368;
+}
