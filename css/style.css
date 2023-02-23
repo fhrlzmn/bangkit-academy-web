@@ -294,6 +294,24 @@ footer {
   color: #5f6368;
 }
 
+a.back-to-top {
+  background-color: #ff0000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive */
+
 /* Laptop */
 @media only screen and (max-width: 1024px) {
   .content-title {
