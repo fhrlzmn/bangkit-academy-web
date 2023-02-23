@@ -15,20 +15,21 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   /* font-family: 'Roboto Mono', monospace; */
-  font-size: 16px;
 }
 
 /* Styling starts here */
 .container,
 .nav-container {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 3rem;
 }
 
 .nav-container {
@@ -43,7 +44,8 @@ ul.nav-list {
 }
 
 a {
-  color: inherit;
+  color: #5f6368;
+  font-weight: 400;
 }
 
 a:hover {
@@ -69,6 +71,28 @@ div.logo a {
 ul.nav-list {
   list-style: none;
   gap: 3rem;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+  display: none;
+}
+
+.hamburger-line {
+  display: block;
+  height: 2px;
+  width: 25px;
+  margin: 5px;
+  background-color: black;
+}
+
+nav #toggle-hamburger {
+  position: absolute;
+  opacity: 0;
 }
 
 main {
@@ -122,6 +146,7 @@ div.content {
 
 .content-description p {
   line-height: 2rem;
+  font-size: 1.1rem;
 }
 
 .card-container {
@@ -139,7 +164,7 @@ div.content {
 }
 
 .card-description {
-  padding: 1rem;
+  padding: 1.2rem;
 }
 
 .card-description h3 {
@@ -176,6 +201,7 @@ aside {
 }
 
 .profile-picture {
+  max-width: 100%;
   border-radius: 50%;
   margin: 1rem 0;
 }
@@ -221,7 +247,7 @@ aside {
 
 footer {
   font-weight: 300;
-  padding: 0rem 3rem;
+  padding: 0rem 5rem;
   background-color: #eff0f1;
 }
 
@@ -266,4 +292,136 @@ footer {
   text-align: center;
   border-top: 1.2px solid rgba(0, 0, 0, 0.1);
   color: #5f6368;
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 16px;
+  }
+
+  header.active {
+    border: none;
+  }
+
+  div.logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-container {
+    position: relative;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  ul.nav-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    padding: 0 3rem;
+    width: 100%;
+  }
+
+  ul.active {
+    display: block;
+    background-color: #ffffff;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.05);
+    padding-bottom: 1rem;
+  }
+
+  ul.nav-list li {
+    margin: 1.2rem 0;
+    text-align: end;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger-menu input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .hamburger-box span {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger-box.active span:first-child {
+    transform: rotate(37deg);
+    transform-origin: top left;
+  }
+
+  .hamburger-box.active span:nth-child(2) {
+    width: 0;
+  }
+
+  .hamburger-box.active span:last-child {
+    transform: rotate(-37deg);
+    transform-origin: bottom left;
+  }
+  main {
+    flex-direction: column;
+  }
+
+  div.content {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .content-title {
+    font-size: 2.5rem;
+  }
+
+  .content-description h2 {
+    font-size: 2rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  article#industry-partners .card-container {
+    width: 100%;
+  }
+
+  article#industry-partners .card-container .card {
+    max-width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    border: none;
+  }
+
+  .profile-picture {
+    max-width: 150px;
+  }
+
+  aside .profile-title {
+    font-size: 3rem;
+    margin: 2rem 0 0.5rem 0;
+    font-weight: 400;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem 0;
+  }
+
+  .footer-container img {
+    align-self: center;
+  }
 }
