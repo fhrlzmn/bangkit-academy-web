@@ -23,6 +23,57 @@ body {
   /* font-family: 'Roboto Mono', monospace; */
 }
 
+/* Dark Mode */
+html.dark header,
+html.dark body,
+html.dark footer,
+html.dark ul.nav-list {
+  background-color: #202124;
+}
+
+html.dark header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+html.dark aside {
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+html.dark footer,
+html.dark .footer-text {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+html.dark .card {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+html.dark .hamburger-line {
+  background-color: #ffffff;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark p {
+  color: #ffffff;
+}
+
+html.dark .card p {
+  color: #cccccc;
+}
+
+html.dark a,
+html.dark .profile-position,
+html.dark .profile-social {
+  color: #cccccc;
+  fill: #cccccc;
+}
+
+html.dark a:hover {
+  color: red;
+}
+
 /* Styling starts here */
 .container,
 .nav-container {
@@ -71,6 +122,7 @@ div.logo a {
 ul.nav-list {
   list-style: none;
   gap: 3rem;
+  align-items: center;
 }
 
 .hamburger-menu {
@@ -123,6 +175,7 @@ div.content {
   color: #000;
   font-size: 4rem;
   font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .content-title span {
@@ -255,7 +308,9 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
-  padding: 1rem 0;
+  padding: 1rem 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .footer-logo {
@@ -315,6 +370,42 @@ a.back-to-top {
   transform: rotate(180deg);
 }
 
+/* icon for toggle darkmode */
+ul li.dark-mode-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li.dark-mode-box svg.moon-icon {
+  fill: #5f6368;
+}
+
+ul li.dark-mode-box svg.sun-icon {
+  fill: #cccccc;
+}
+
+ul li.dark-mode-box svg.hidden {
+  display: none;
+}
+
+ul li.dark-mode-box input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+ul li.dark-mode-box:hover svg {
+  fill: #ff0000;
+}
+
+body a.back-to-top:hover {
+  color: white;
+}
+
 /* Responsive */
 
 /* Laptop */
@@ -334,6 +425,14 @@ a.back-to-top {
 
 /* Tablet */
 @media only screen and (max-width: 768px) {
+  html.dark header.active {
+    border: none;
+  }
+
+  html.dark nav ul.nav-list.active {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
   header.active {
     border: none;
   }
@@ -356,7 +455,7 @@ a.back-to-top {
     position: absolute;
     left: 0;
     top: 4rem;
-    padding: 0 3rem;
+    padding: 0 3.5rem;
     width: 100%;
   }
 
@@ -425,6 +524,10 @@ a.back-to-top {
 
   article#industry-partners .card-container .card {
     max-width: 100%;
+  }
+
+  html.dark aside {
+    border: none;
   }
 
   aside {
