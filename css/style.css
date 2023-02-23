@@ -294,14 +294,23 @@ footer {
   color: #5f6368;
 }
 
+/* Laptop */
 @media only screen and (max-width: 1024px) {
-}
-
-@media only screen and (max-width: 700px) {
-  html {
-    font-size: 16px;
+  .content-title {
+    font-size: 3rem;
   }
 
+  .content-description h2 {
+    font-size: 2.5rem;
+  }
+
+  aside .profile-title {
+    font-weight: 400;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
   header.active {
     border: none;
   }
@@ -386,10 +395,6 @@ footer {
     font-size: 2rem;
   }
 
-  .card-container {
-    flex-direction: column;
-  }
-
   article#industry-partners .card-container {
     width: 100%;
   }
@@ -423,5 +428,20 @@ footer {
 
   .footer-container img {
     align-self: center;
+  }
+}
+
+/* Smartphone */
+@media only screen and (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  article#industry-partners .card-container {
+    width: 100%;
+  }
+
+  article#industry-partners .card-container .card {
+    max-width: 100%;
   }
 }
