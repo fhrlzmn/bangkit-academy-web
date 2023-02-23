@@ -286,9 +286,13 @@ footer {
   font-size: 1.5rem;
 }
 
+.footer-links a {
+  font-size: 1rem;
+}
+
 .footer-text {
   padding: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-align: center;
   border-top: 1.2px solid rgba(0, 0, 0, 0.1);
   color: #5f6368;
@@ -297,8 +301,8 @@ footer {
 a.back-to-top {
   background-color: #ff0000;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   font-size: 1.2rem;
   color: #ffffff;
   display: flex;
@@ -308,6 +312,7 @@ a.back-to-top {
   bottom: 3rem;
   right: 3rem;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+  transform: rotate(180deg);
 }
 
 /* Responsive */
@@ -406,7 +411,8 @@ a.back-to-top {
   }
 
   .content-title {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
   }
 
   .content-description h2 {
@@ -427,7 +433,7 @@ a.back-to-top {
   }
 
   .profile-picture {
-    max-width: 150px;
+    max-width: 200px;
   }
 
   aside .profile-title {
@@ -436,11 +442,24 @@ a.back-to-top {
     font-weight: 400;
   }
 
+  aside .profile-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  aside .profile-position {
+    font-size: 1.1rem;
+  }
+
+  aside .profile-desc {
+    font-size: 1.1rem;
+  }
+
   .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3rem;
+    gap: 1rem;
     padding: 1rem 0;
   }
 
